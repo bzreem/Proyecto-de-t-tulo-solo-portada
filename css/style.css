@@ -208,8 +208,9 @@ h1 {
   width: 100%;
   height: 60rem;
   position: relative;
-   background-image: url("/assets/img/transformers.jpg"); 
-  /* background-image: url("http://localhost/Proyecto_pagina_web/assets/img/transformers.jpg"); */
+   /* background-image: url("/assets/img/transformers.jpg");  */
+   background-image: url("https://bzreem.github.io/Proyecto-de-t-tulo-solo-portada/assets/img/transformers.jpg"); 
+  
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -338,7 +339,8 @@ h1 {
   height: 60rem;
   margin-top: var(--media-margin-top);
   position: relative;
-  background-image: url("/assets/img/geforce.jpg");
+  /* background-image: url("/assets/img/geforce.jpg"); */
+  background-image: url("https://bzreem.github.io/Proyecto-de-t-tulo-solo-portada/assets/img/geforce.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
