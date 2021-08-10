@@ -2,7 +2,7 @@ const d = document;
 export default function Intersection() {
   const $sectionGames = d.querySelector(".section-create-games figure");
   const $video = d.createElement("video");
-  $video.src = "assets/video/battlefield_Trim.mp4";
+  $video.src = "https://bzreem.github.io/Proyecto-de-t-tulo-solo-portada/assets/video/battlefield_Trim.mp4";
   const $fragment = d.createDocumentFragment();
   // const $p = d.querySelectorAll(".section-create-games .information-games p");
 let myInterval;
