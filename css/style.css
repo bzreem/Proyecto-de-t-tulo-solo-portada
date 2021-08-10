@@ -1,0 +1,910 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --color-bg-main: #faf9f9;
+  --color-text: aliceblue;
+  --color-cursos: #f1f1f1;
+  --media-margin-top: 1.5rem;
+  --color-bg-black: #232120;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* INICIO HEADER */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.menu-hamburguer {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  transform: translate(-50rem);
+  transition: all 0.5s ease;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+}
+
+.menu-hamburguer a {
+  display: block;
+  margin-top: var(--media-margin-top);
+  text-align: center;
+  color: var(--color-cursos);
+}
+
+.menu-hamburguer.active-menu {
+  transform: translate(0px);
+  opacity: 1;
+}
+
+header .header-sticky {
+  width: 100%;
+}
+
+header .header-sticky nav {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+header .header-sticky nav.active-menu {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+header .header-sticky a {
+  display: block;
+  width: 9%;
+}
+
+header .header-sticky a img {
+  width: 100%;
+}
+
+nav .complete-menu {
+  padding-bottom: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-cursos);
+}
+
+.side-bar {
+  position: relative;
+}
+.side-bar figure {
+  width: 100%;
+}
+
+.side-bar figure .img-bar {
+  width: 100%;
+  opacity: 1;
+}
+
+.side-bar figure img {
+  width: 100%;
+}
+
+.side-bar figure .next-previous {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.side-bar figure .next-previous a {
+  display: block;
+  padding: 1rem 1rem;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.side-bar figure img.remove {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 2s;
+  opacity: 0;
+}
+
+/* FIN HEADER */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO MAIN */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.presentation {
+  margin-top: var(--media-margin-top);
+}
+
+.presentation article {
+  width: 80%;
+  margin: auto;
+}
+.presentation p {
+  text-align: justify;
+  line-height: 1.8rem;
+}
+h1 {
+  text-align: center;
+}
+
+.presentation p {
+  margin-top: 0.6rem;
+  /* text-align: center; */
+  font-size: 1.1rem;
+}
+
+.tools {
+  margin-top: var(--media-margin-top);
+  background-color: var(--color-bg-black);
+}
+
+.tools h2 {
+  padding-top: 1rem;
+  color: var(--color-text);
+}
+
+.tools article {
+  margin-top: 0.6rem;
+  padding-left: 2rem;
+}
+
+.tools article p {
+  text-align: justify;
+  padding: 0.5rem 0;
+  padding-right: 1.3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.tools article .separate-p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.6rem;
+}
+
+.tools article .separate-p p {
+  padding: 0 2rem;
+  font-size: 3rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO BG IMG */
+
+.section-create-games {
+  margin-top: var(--media-margin-top);
+}
+
+.section-create-games figure {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+   background-image: url("/assets/img/transformers.jpg"); 
+  /* background-image: url("http://localhost/Proyecto_pagina_web/assets/img/transformers.jpg"); */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-create-games figure .information-games {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.section-create-games figure .information-games p {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 7rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.video-play {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 997;
+}
+
+/* FIN BG IMG */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* INICIO BOTON SWIP UP */
+
+.swip-up {
+  position: fixed;
+  bottom: 1vh;
+  right: 1vh;
+  width: 10%;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  z-index: 97;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  color: var(--color-cursos);
+  background-color: var(--color-bg-black);
+}
+
+.swip-up.is-swip-active {
+  visibility: visible;
+  opacity: 1;
+}
+/* FIN BOTON SWIP UP */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO CURSOS */
+.courses {
+  width: 100%;
+  margin-top: var(--media-margin-top);
+}
+
+.courses h2 {
+  margin-bottom: var(--media-margin-top);
+  text-align: center;
+}
+
+.article-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-container article {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: var(--color-cursos);
+  border: solid black 0.1rem;
+  box-shadow: 12px 15px 6px 3px rgba(0, 0, 0, 0.4);
+}
+
+.article-container figure img {
+  width: 100%;
+}
+
+.article-container h3 {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.courses article a {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: red;
+}
+.courses a {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #232120;
+}
+
+/* FIN CURSOS */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO COMPONENTES */
+.components {
+  width: 100%;
+  height: 60rem;
+  margin-top: var(--media-margin-top);
+  position: relative;
+  background-image: url("/assets/img/geforce.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.information-components {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.information-components p {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 7rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.information-components p a {
+  display: block;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 7rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+/* FIN COMPONENTES */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO SOCIOS */
+.partners {
+  margin-top: var(--media-margin-top);
+}
+
+.partners h2 {
+  margin-bottom: var(--media-margin-top);
+  text-align: center;
+}
+
+.partners a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: #232120;
+  background-color: var(--color-cursos);
+  padding: 2rem;
+}
+
+.partners a figure {
+  width: 50%;
+}
+
+.partners a figure img {
+  width: 100%;
+  border-radius: 100%;
+}
+/* FIN SOCIOS */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*INICIO SUSCRIPCION */
+
+.suscriptions {
+  width: 100%;
+  margin: auto;
+  background-color: var(--color-bg-black);
+}
+
+.suscriptions article {
+  padding: 1rem;
+}
+
+.suscriptions article h2 {
+  color: var(--color-cursos);
+}
+
+.suscriptions article p {
+  margin-top: var(--media-margin-top);
+  color: var(--color-cursos);
+  font-weight: bold;
+  line-height: 1.6rem;
+}
+
+.suscriptions article a {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  color: var(--color-cursos);
+}
+/*FIN SUSCRIPCION */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FIN MAIN */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* INICIO MEDIAQUERIE */
+
+@media screen and (min-width: 560px) {
+  header .header-sticky a {
+    display: block;
+    width: 6%;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  header .header-sticky a {
+    display: block;
+    width: 2%;
+  }
+
+  header .header-sticky a img {
+    width: 100%;
+  }
+
+  nav .complete-menu {
+    padding-bottom: 0.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-cursos);
+  }
+
+  .side-bar figure .img-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .side-bar figure .img-bar {
+    width: 100%;
+    height: 26rem;
+  }
+
+  .presentation h1 {
+    font-size: 2rem;
+  }
+
+  .presentation p {
+    font-size: 1.5rem;
+  }
+
+  .article-container article {
+    width: 40%;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--color-cursos);
+    border: solid black 0.1rem;
+    box-shadow: 12px 15px 6px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  /* TOOLS MQ */
+  .tools {
+    padding: 2.5rem 0;
+  }
+
+  .tools h2 {
+    padding-top: 0rem;
+    font-size: 2rem;
+    color: var(--color-text);
+  }
+
+  .tools article {
+    margin-top: 0.6rem;
+    padding-left: 2rem;
+  }
+
+  .tools article p {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    padding-right: 1.3rem;
+    color: var(--color-text);
+  }
+
+  .tools article .separate-p p {
+    padding: 0 2rem;
+    font-size: 4rem;
+  }
+
+  .suscriptions {
+    padding: 2.5rem 0;
+  }
+
+  .suscriptions h2 {
+    font-size: 2rem;
+  }
+
+  .suscriptions p {
+    font-size: 1.5rem;
+  }
+
+  .suscriptions a {
+    font-size: 1.5rem;
+  }
+
+  .swip-up {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+    width: 10%;
+    font-size: 4rem;
+    border-radius: 50%;
+    z-index: 97;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* INICIO FONDO */
+  .section-create-games figure .information-games p {
+    font-size: 3rem;
+  }
+  /* FIN FONDO */
+
+  /* INICIO FONDO2 */
+  .information-components p {
+    font-size: 4rem;
+  }
+
+  .information-components p a {
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+
+  /* FIN INICIO FONDO 2 */
+
+  /* INICIO CURSOS */
+
+  .article-container article {
+    width: 30%;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--color-cursos);
+    border: solid black 0.1rem;
+    box-shadow: 12px 15px 6px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .courses h2 {
+    margin-bottom: var(--media-margin-top);
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .article-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article-container figure img {
+    width: 100%;
+  }
+
+  .article-container h3 {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .courses article a {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: red;
+  }
+  .courses a {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #232120;
+  }
+
+  /* FIN CURSOS */
+
+  /* INICIO SOCIOS */
+
+  .partners h2 {
+    margin-bottom: var(--media-margin-top);
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .partners a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #232120;
+    background-color: var(--color-cursos);
+    padding: 2rem;
+  }
+
+  .partners a figure {
+    width: 20%;
+  }
+
+  .partners a figure img {
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  .partners article {
+    width: 60%;
+  }
+
+  .partners article h3 {
+    font-size: 1.6rem;
+  }
+
+  .partners article p {
+    font-size: 1.2rem;
+  }
+
+  /* FIN SOCIOS */
+}
+
+@media screen and (min-width: 1300px) {
+  .side-bar figure .img-bar {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .side-bar figure .img-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .presentation h1 {
+    font-size: 3rem;
+  }
+
+  .presentation p {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+
+  /* TOOLS MQ */
+
+  .tools {
+    padding: 8rem 0;
+  }
+
+  .tools h2 {
+    padding-top: 0rem;
+    font-size: 2.5rem;
+    color: var(--color-text);
+  }
+
+  .tools article {
+    margin-top: 0.6rem;
+    padding-left: 2rem;
+  }
+
+  .tools article p {
+    text-align: justify;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    padding-right: 1.3rem;
+    color: var(--color-text);
+  }
+
+  .tools article .separate-p p {
+    padding: 0 2rem;
+    font-size: 6rem;
+  }
+
+  .suscriptions {
+    padding: 2.5rem 0;
+  }
+
+  .suscriptions h2 {
+    font-size: 2.5rem;
+  }
+
+  .suscriptions article p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .suscriptions a {
+    font-size: 2rem;
+  }
+
+  .swip-up {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+    width: 10%;
+    font-size: 5rem;
+    border-radius: 50%;
+    z-index: 97;
+  }
+
+  /* FIN TOOLS MQ */
+
+  /* INICIO CURSOS */
+
+  .article-container article {
+    width: 45%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--color-cursos);
+    border: solid black 0.1rem;
+    box-shadow: 12px 15px 6px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .courses h2 {
+    margin-bottom: var(--media-margin-top);
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .article-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article-container figure img {
+    width: 100%;
+  }
+
+  .article-container h3 {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .courses article a {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+  }
+  .courses a {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: #232120;
+  }
+  /* FIN CURSOS */
+
+  /* INICIO SOCIOS */
+
+  .partners h2 {
+    margin-bottom: var(--media-margin-top);
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .partners a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #232120;
+    background-color: var(--color-cursos);
+    padding: 2rem;
+  }
+
+  .partners a figure {
+    width: 20%;
+  }
+
+  .partners a figure img {
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  .partners article {
+    width: 60%;
+  }
+
+  .partners article h3 {
+    font-size: 2rem;
+  }
+
+  .partners article p {
+    font-size: 1.5rem;
+  }
+  /* FIN SOCIOS */
+}
+
+  @media screen and (min-width: 1450px) {
+    .side-bar figure .img-bar {
+      width: 100%;
+      height: 45rem;
+    }
+
+    .side-bar figure .img-bar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .presentation h1 {
+      font-size: 3rem;
+    }
+
+    .presentation p {
+      font-size: 1.9rem;
+      line-height: 3rem;
+    }
+
+    .swip-up {
+      position: fixed;
+      bottom: 1vh;
+      right: 1vh;
+      width: 10%;
+      font-size: 6rem;
+      border-radius: 50%;
+      z-index: 97;
+    }
+  }
+
+  @media screen and (min-width: 2500px) {
+    body {
+      max-width: 2500px;
+      margin: auto;
+    }
+
+    .side-bar figure .img-bar {
+      width: 100%;
+      height: 60rem;
+    }
+  }
+
+
+/* .swip-up{
+  border-radius: 50%;
+  height: 0vh;
+  font-size: 4rem;
+} */
+/* FIN MEDIAQUERIE */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
